@@ -8,5 +8,8 @@ PROJECT(nowire
 
 INCLUDE_DIRECTORIES(includes)
 
-ADD_EXECUTABLE(nowire src/main.c)
+ADD_EXECUTABLE(nowire
+               src/main.c
+               src/math.c 
+               src/physics.c)
 

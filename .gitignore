@@ -54,3 +54,4 @@ dkms.conf
 # Cmake build files
 build/
 *.json
+.ccls-cache/
