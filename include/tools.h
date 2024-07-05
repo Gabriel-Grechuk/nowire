@@ -27,7 +27,7 @@ boolean nwr_valid_pin(pin pin);
 
 
 /**
- *  This funcion assigns a pin as being used.
+ *  This function assigns a pin as being used.
  *
  *  Args
  *    pin pin:  Pin to be marked as being used.

@@ -1,7 +1,7 @@
 #include "tools.h"
 
 /**
- *  This global variagle keeps track of all the used pins.
+ *  This global variable keeps track of all the used pins.
  */
 pin nwr_used_pins[MAX_PINS] = {0};
 
