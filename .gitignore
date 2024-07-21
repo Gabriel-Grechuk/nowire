@@ -60,4 +60,4 @@ build/
 # KiCad schematics
 *.zip
 *.lck
-\#auto_save_files\#
+*auto_saved_files*
