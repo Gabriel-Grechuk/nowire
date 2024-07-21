@@ -1,0 +1,4 @@
+- #8 Criado o esquema elétrico dos sendores ultrasônicos HC-SR04;
+- #6 Criada a estrutura inicial da aplicação;
+- #4 Configurado o projeto para rodar no PlatformIO e fazer os builds para o módulo ESP32-DEVKIT-V1;
+- #1 Builds em x86_65 para testes iniciais;
