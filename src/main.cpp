@@ -14,27 +14,60 @@ UltrasonicSensor us_right = {
     RIGHT_ULTRASONIC_SENSOR_ECHO, // Echo.
 };
 
-void setup() {
-  Serial.begin(115200);
-  pinMode(LED_BUILTIN, OUTPUT);
+int trigButton = 1;
+
+void run_car(int millisec){
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
   digitalWrite(LED_BUILTIN, HIGH);
 
-  nwr_setup_ultrasonic_sensor(&us_left);
-  nwr_setup_ultrasonic_sensor(&us_right);
+  /* The activation order should be exactly as bellow.
+   * There is some delay at the 
+   */
+  digitalWrite(LEFT_DRIVE_IN1, LOW);
+  digitalWrite(LEFT_DRIVE_IN2, HIGH);
+  digitalWrite(RIGHT_DRIVE_IN1, HIGH);
+  digitalWrite(RIGHT_DRIVE_IN2, LOW);
+
+  delay(millisec);
+
+  digitalWrite(LEFT_DRIVE_IN2, LOW);
+  digitalWrite(RIGHT_DRIVE_IN1, LOW);
+  digitalWrite(LEFT_DRIVE_IN1, LOW);
+  digitalWrite(RIGHT_DRIVE_IN2, LOW);
+
+  digitalWrite(LED_BUILTIN, LOW);
+}
+
+
+void setup() {
+  /* Serial */
+  Serial.begin(115200);
+
+  /* Activate button */
+  pinMode(0, INPUT);
+
+  /* Led */
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
+
+  /* Motor drive */
+  pinMode(LEFT_DRIVE_IN1, OUTPUT);
+  pinMode(LEFT_DRIVE_IN2, OUTPUT);
+
+  pinMode(RIGHT_DRIVE_IN1, OUTPUT);
+  pinMode(RIGHT_DRIVE_IN2, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  long left_distance = nwr_read_ultrasonic_sensor(us_left);
-  long right_distance = nwr_read_ultrasonic_sensor(us_right);
+  trigButton = digitalRead(0);
 
-  Serial.print("Distances: ");
-  Serial.print(left_distance);
-  Serial.print(" <|> ");
-  Serial.print(right_distance);
-  Serial.print("\r");
+  if(!trigButton){
+    run_car(RUNNING_TIME);
+  }
 
-  delay(10);
+  trigButton = 0;
   digitalWrite(LED_BUILTIN, LOW);
-  delay(10);
 }

@@ -460,17 +460,17 @@
     "net_colors": null,
     "netclass_assignments": {
       "GND": "SR_ECHO",
-      "Net-(R1-Pad1)": "SR_ECHO",
+      "Net-(R1-Pad1)": "SL_ECHO",
       "Net-(R1-Pad2)": "SR_ECHO",
-      "Net-(R3-Pad1)": "SL_ECHO",
-      "unconnected-(CONTROLLER-D22-Pad14)": "SL_ECHO",
-      "unconnected-(CONTROLLER-D23-Pad15)": "SL_TRIG",
-      "unconnected-(CONTROLLER-D4-Pad5)": "SR_ECHO",
-      "unconnected-(CONTROLLER-D5-Pad8)": "SR_TRIG",
+      "Net-(R3-Pad1)": "SR_ECHO",
+      "unconnected-(CONTROLLER-D22-Pad14)": "SR_ECHO",
+      "unconnected-(CONTROLLER-D23-Pad15)": "SR_TRIG",
+      "unconnected-(CONTROLLER-D4-Pad5)": "SL_ECHO",
+      "unconnected-(CONTROLLER-D5-Pad8)": "SL_TRIG",
       "unconnected-(R2-Pad2)": "SR_ECHO",
-      "unconnected-(SENSOR_L-TRIG-Pad2)": "SR_TRIG",
+      "unconnected-(SENSOR_L-TRIG-Pad2)": "SL_TRIG",
       "unconnected-(SENSOR_L1-TRIG-Pad2)": "SR_TRIG",
-      "unconnected-(SENSOR_R-TRIG-Pad2)": "SL_TRIG"
+      "unconnected-(SENSOR_R-TRIG-Pad2)": "SR_TRIG"
     },
     "netclass_patterns": []
   },

@@ -20,4 +20,18 @@ typedef unsigned char pin;
 #define RIGHT_ULTRASONIC_SENSOR_TRIG 5
 #define RIGHT_ULTRASONIC_SENSOR_ECHO 4
 
+#define LEFT_DRIVE_IN1 27
+#define LEFT_DRIVE_IN2 14
+
+#define RIGHT_DRIVE_IN1 12
+#define RIGHT_DRIVE_IN2 13
+
+
+/**
+ *  Defines the time that the car will run before stopping.
+ * 
+ *  Time in milliseconds
+ */
+#define RUNNING_TIME 2000
+
 #endif // _NOWIRE_H_
